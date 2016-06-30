@@ -1,21 +1,21 @@
 import React from 'react';
 import CommentList from './list';
 import CommentForm from './comment-form';
+import USER_DATA from '../user/user-data';
+import COMMENTS_DATA from './comments-data';
+import User from '../user/user';
 
 class CommentBox extends React.Component {
     constructor() {
         super();
         this.state = {
-            data: []
+            data: [],
+            author:{}
         }
     }
     loadCommentsFromServer() {
-        //simulate call
-        this.data = [
-          {id: 1, author: "Pete Hunt", text: "This is one comment test", date:'2015-12-12'},
-          {id: 2, author: "Jordan Walke", text: "This is *another* comment", date:'2015-02-12'}
-        ];
-        this.setState({data: this.data});
+        //TODO: get data from server
+        this.setState({data: COMMENTS_DATA, author: USER_DATA});
    }
     componentDidMount() {
         this.loadCommentsFromServer();
@@ -23,7 +23,9 @@ class CommentBox extends React.Component {
     render() {
         return (
             <div className="commentBox">
-                <h1>Comments</h1>
+                <User user={this.state.author}/>
+
+                <h4>Comments</h4>
                 <CommentList data={this.state.data} />
                 <CommentForm />
             </div>

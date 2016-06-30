@@ -8,9 +8,11 @@ class CommentList extends React.Component{
     render() {
         var commentNodes = this.props.data.map(function(comment) {
                 return (
-                    <Comment author={comment.author} key={comment.id} date={comment.date}>
-                      {comment.text}
-                    </Comment>
+                    <div key={comment.id}>
+                        <Comment date={comment.date}>
+                          {comment.comment}
+                        </Comment>
+                    </div>
                   );
                 });
         return (
