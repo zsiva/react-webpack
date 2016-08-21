@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-class ProfilePic extends React.Component {
+class ProfilePic extends Component {
     constructor() {
         super();
     }
@@ -11,7 +11,7 @@ class ProfilePic extends React.Component {
     }
 }
 
-class ProfileName extends React.Component {
+class ProfileName extends Component {
     constructor() {
         super();
     }
@@ -22,7 +22,7 @@ class ProfileName extends React.Component {
     }
 }
 
-class ProfileLink extends React.Component {
+class ProfileLink extends Component {
     constructor() {
         super();
     }
@@ -37,7 +37,7 @@ class ProfileLink extends React.Component {
     }
 }
 
-class User extends React.Component {
+class User extends Component {
     constructor() {
         super();
     }

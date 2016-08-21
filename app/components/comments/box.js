@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {Component} from 'react';
 import CommentList from './list';
 import CommentForm from './comment-form';
 import USER_DATA from '../user/user-data';
 import COMMENTS_DATA from './comments-data';
 import User from '../user/user';
 
-class CommentBox extends React.Component {
+class CommentBox extends Component {
     constructor() {
         super();
         this.state = {

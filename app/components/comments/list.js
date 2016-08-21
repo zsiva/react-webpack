@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Comment from './comment';
 
-class CommentList extends React.Component{
+class CommentList extends Component{
     constructor() {
         super();
     }

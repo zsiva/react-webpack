@@ -1,3 +1,5 @@
+var path = require("path");
+
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
     template: __dirname + '/app/index.html',
@@ -19,7 +21,7 @@ module.exports = {
         loaders: [
             {
                 test: /\.js$/,
-                exclude: /node_modules/,
+                include: __dirname + '/app',
                 loader: 'babel',
                 query: {
                     presets: ['es2015', 'react']
