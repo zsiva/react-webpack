@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import CommentList from './list';
 import CommentForm from './comment-form';
-import USER_DATA from '../user/user-data';
+import USER_DATA from '../UserList/user-data';
 import COMMENTS_DATA from './comments-data';
-import User from '../user/user';
+import User from '../User';
 
 class CommentBox extends Component {
     constructor() {

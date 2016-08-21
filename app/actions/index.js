@@ -20,3 +20,10 @@ export const toggleTodo = (id) => {
     id
   }
 }
+
+export const displayUser = (id) => {
+    return {
+      type: 'DISPLAY_USER',
+      id
+    }
+}
